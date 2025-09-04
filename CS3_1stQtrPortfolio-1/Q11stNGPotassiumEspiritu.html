@@ -1,0 +1,25 @@
+<script>
+
+    let age = window.prompt ("How old are you?", "14");
+    let maxAge = window.prompt ("How long do you think you'll live for?", "100");
+    let numPerDay = window.prompt ( "How many times do you eat your favorite food per day?", "4");
+
+document.write("AGE:" + age + "; MAX AGE:" + maxAge + "; TIMES PER DAY:" + numPerDay + "<br>");
+
+let sure = window.confirm("Do you want to proceed?")
+if (sure==true) {
+    console.log("You chose to proceed.");
+
+let numdays = (maxAge - age) * 365;
+document.write("You have " + numdays + " days left to eat your favorite food.<br>");
+
+let totalRequired = (numPerDay*365)*(maxAge - age);
+document.write("You will need " + totalRequired + " servings of your favorite food to last you until age " + maxAge + ".<br>");
+}
+if (sure==false)
+{
+    console.log("You chose not to proceed. Please re-check your info!");
+    document.write("error!")
+}
+
+</script>
